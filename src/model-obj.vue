@@ -44,10 +44,10 @@ export default {
     mtl: {
       type: String,
     },
-    //FI
-    mtlResourcePath:{
-		  type: String,
-	  }
+    // FI
+    mtlResourcePath: {
+      type: String,
+    },
   },
   data() {
     const objLoader = new OBJLoader(manager);
@@ -118,16 +118,19 @@ export default {
 
         if (mtlPath) {
           this.mtlLoader.setPath(mtlPath);
-          //FI
-          if(this.mtlResourcePath)
-            this.mtlLoader.setResourcePath(this.mtlResourcePath)
+          // FI
+          if (this.mtlResourcePath) {
+            this.mtlLoader.setResourcePath(this.mtlResourcePath);
+          }
         }
 
         this.mtlLoader.load(mtlSrc, (materials) => {
-           //FI
-          for(const mat in materials.materialsInfo){
-            if(materials.materialsInfo[mat].map_kd)
-            materials.materialsInfo[mat].map_kd = _this.mtlResourcePath
+          // FI
+          // eslint-disable-next-line no-restricted-syntax
+          for (const mat in materials.materialsInfo) {
+            if (materials.materialsInfo[mat].map_kd) {
+              materials.materialsInfo[mat].map_kd = this.mtlResourcePath;
+            }
           }
           materials.preload();
 
