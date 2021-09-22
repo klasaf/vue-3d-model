@@ -44,6 +44,9 @@ export default {
     mtl: {
       type: String,
     },
+    mtlResourcePath:{
+		  type: String,
+	  }
   },
   data() {
     const objLoader = new OBJLoader(manager);
