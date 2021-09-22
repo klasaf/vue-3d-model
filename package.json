@@ -1,5 +1,5 @@
 {
-  "name": "vue-3d-model",
+  "name": "fi-vue-3d-model",
   "version": "1.4.0",
   "description": "3D models viewer with vue.js",
   "keywords": [
@@ -15,7 +15,7 @@
     "preview.gif",
     "README.md"
   ],
-  "author": "Jiulong Hu <me@hujiulong.com>",
+  "author": "Jiulong Hu <me@hujiulong.com>, edith version by FifthIngenium",
   "main": "dist/vue-3d-model.umd.js",
   "scripts": {
     "dev": "vue-cli-service serve examples/index.js",
