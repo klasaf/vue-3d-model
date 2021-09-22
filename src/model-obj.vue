@@ -44,6 +44,7 @@ export default {
     mtl: {
       type: String,
     },
+    //FI
     mtlResourcePath:{
 		  type: String,
 	  }
@@ -117,6 +118,9 @@ export default {
 
         if (mtlPath) {
           this.mtlLoader.setPath(mtlPath);
+          //FI
+          if(this.mtlResourcePath)
+            this.mtlLoader.setResourcePath(this.mtlResourcePath)
         }
 
         this.mtlLoader.load(mtlSrc, (materials) => {
