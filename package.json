@@ -1,5 +1,5 @@
 {
-  "name": "fi-vue-3d-model",
+  "name": "@klasaf/fi-vue-3d-model",
   "version": "1.4.1",
   "description": "3D models viewer with vue.js",
   "keywords": [
@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "vue-cli-service serve examples/index.js",
     "build-examples": "vue-cli-service build examples/index.js --dest examples-dist",
-    "build": "vue-cli-service build --target lib --name vue-3d-model src/index.js",
+    "build": "vue-cli-service build --target lib --name fi-vue-3d-model src/index.js",
     "lint": "vue-cli-service lint src/ tests/ examples/",
     "lint:fix": "npm run lint -- --fix",
     "test": "vue-cli-service test:unit",
@@ -60,5 +60,9 @@
     "vue-router": "^3.3.4",
     "vue-template-compiler": "^2.6.11",
     "yorkie": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klasaf/vue-3d-model.git"
   }
 }
