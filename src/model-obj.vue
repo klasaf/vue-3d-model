@@ -124,6 +124,11 @@ export default {
         }
 
         this.mtlLoader.load(mtlSrc, (materials) => {
+           //FI
+          for(const mat in materials.materialsInfo){
+            if(materials.materialsInfo[mat].map_kd)
+            materials.materialsInfo[mat].map_kd = _this.mtlResourcePath
+          }
           materials.preload();
 
           this.loader
